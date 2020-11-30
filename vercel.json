@@ -8,8 +8,8 @@
       "dest": "/$1.js"
     },
     {
-      "src": "(.*).png",
-      "dest": "/$1.png"
+      "src": "(.*).css",
+      "dest": "/$1.css"
     },
     {
       "src": "(.*).json",
