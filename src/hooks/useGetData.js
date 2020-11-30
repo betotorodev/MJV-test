@@ -5,6 +5,7 @@ const useGetData = ( filter ) => {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    console.log(filter)
     setLoading(true)
     fetch(`https://rickandmortyapi.com/api/character/?name=${filter}`)
       .then(res => res.json())

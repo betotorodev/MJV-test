@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Characters from '../components/Characters/index'
 import Loading from '../components/Loading/index'
@@ -18,7 +18,7 @@ const ListOfCharacters = () => {
   return (
     <>
       <article className="container home">
-        <Search  {...filter} {...onChange}/>
+        <Search  filter={filter} onChange={onChange}/>
         <section className="characters-container">
           {
             loading
