@@ -37,11 +37,11 @@ const ListOfCharacters = () => {
           {
             loading
               ? <Loading />
-              : data?.map((character) => <Characters characters={character}/>)
-          }
-          {
-            !loading && data?.length === 0 &&
-              <h1>No existe ese personaje :/</h1>
+              : (
+                data?.length === undefined
+                  ? <h1>No existe ese personaje</h1>
+                  : data?.map((character) => <Characters characters={character}/>)
+              )
           }
         </section>
       </article>
