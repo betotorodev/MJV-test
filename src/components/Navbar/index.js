@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className="container navigation">
         <ul>
           <li>
-            <a href="">
+            <a href="/">
               <div>
                 <img src={rick} alt="rick"/>
               </div>
@@ -16,7 +16,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="">Search</a>
+            MJV test
           </li>
         </ul>
       </nav>

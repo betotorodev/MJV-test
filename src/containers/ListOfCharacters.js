@@ -1,38 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import Characters from '../components/Characters/index'
 import Loading from '../components/Loading/index'
+import Search from '../components/Search/index'
+
+import useGetData from '../hooks/useGetData'
 
 const ListOfCharacters = () => {
-  const [data, setData] = useState([])
   const [filter, setFilter] = useState('')
-  const [loading, setLoading] = useState(false)
+  const { data, loading } = useGetData(filter)
 
   const onChange = e => {
     e.preventDefault()
     setFilter(e.target.value)
   }
 
-  useEffect(() => {
-    setLoading(true)
-    fetch(`https://rickandmortyapi.com/api/character/?name=${filter}`)
-      .then(res => res.json())
-      .then(characters => {
-        setData(characters.results)
-        setLoading(false)
-      })
-      .catch(err => console.log(err))
-  }, [filter])
-
   return (
     <>
       <article className="container home">
-        <input 
-          type="text"
-          value={filter}
-          onChange={onChange}
-          className="search"
-        />
+        <Search  {...filter} {...onChange}/>
         <section className="characters-container">
           {
             loading
@@ -40,7 +26,7 @@ const ListOfCharacters = () => {
               : (
                 data?.length === undefined
                   ? <h1>No existe ese personaje</h1>
-                  : data?.map((character) => <Characters characters={character}/>)
+                  : data?.map(characters => <Characters characters={characters} />)
               )
           }
         </section>
