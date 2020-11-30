@@ -1,6 +1,6 @@
 import React from 'react'
 
-const rick = 'https://lh3.googleusercontent.com/proxy/c7c8m3wC3tUNUzaVDQuLyNuW7hWj41wivahf2hTehiXT01jUpqhRCLwDt2stbNjczoQqRYtDjMxl4OvYHd-tapZSgUZpda5coQKNgYag8_bw07CgIg'
+const rick = 'https://img.pngio.com/rick-png-png-group-romolagaraiorg-915_874.png'
 
 const Navbar = () => {
   return (
