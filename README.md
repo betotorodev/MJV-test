@@ -1,6 +1,6 @@
 # The Rick And Morty App
 
-I decided to built a List of products and and the Product Search features. The tecnologies that I use for the test are:
+Hi 😁 this is my project and I decided to built a List of Products and and the Product Search features. The tecnologies that I use for the test are:
 
 - React
 - Sass
@@ -8,6 +8,10 @@ I decided to built a List of products and and the Product Search features. The t
 - Babel
 - Prettier
 - ESLint
+
+For consuming the data I use the [Rick and Morty](https://rickandmortyapi.com/) API provided that I really love the show 😅
+
+And for the deployment I use Vercel.
 
 ---
 
@@ -35,3 +39,5 @@ and, there are a final sacript that show you if you have errors in your code, so
 or
 
 `npm run lint`
+
+Thanks!

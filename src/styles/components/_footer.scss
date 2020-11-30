@@ -15,3 +15,15 @@
     font-weight: 500;
   }
 }
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social-image {
+  width: 30px;
+  & img {
+    width: 100%;
+  }
+}
